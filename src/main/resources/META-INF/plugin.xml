@@ -1,0 +1,40 @@
+<idea-plugin>
+    <id>moe.leer.plugins.codeflow-plugin</id>
+    <name>codeflow</name>
+    <version>1.0</version>
+    <vendor email="leereindeer@outlook.com" url="http://leer.moe">LeeReindeer</vendor>
+
+    <description><![CDATA[
+       A plugin to convert java code to <em>flowchart</em><br>
+    ]]></description>
+
+    <change-notes><![CDATA[
+    A plugin to convert java code to flowchart<br>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+
+    <project-components>
+        <component>
+            <implementation-class>moe.leer.plugins.codeflow.CodeFlowPluginController</implementation-class>
+        </component>
+    </project-components>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="moe.leer.plugins.codeflow.generate" class="moe.leer.plugins.codeflow.GenerateFlowchartAction"
+                text="Flowchart" description="Generate flowchart with selected code">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+    </actions>
+
+</idea-plugin>
