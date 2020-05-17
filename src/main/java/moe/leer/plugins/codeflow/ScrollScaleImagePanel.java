@@ -90,7 +90,6 @@ public class ScrollScaleImagePanel extends JPanel {
       // refresh scroll bar
       scrollPane.revalidate();
 //      LOG.debug("image scale: " + scale);
-      System.out.println(image.getWidth() * scale + ", " + image.getHeight() * scale);
     });
     return scaleSlider;
   }

@@ -1,1 +1,8 @@
-# Created by .ignore support plugin (hsz.mobi)
+
+.gradle/
+.idea/
+build/
+src/main/java/moe/leer/plugins/codeflow/FlowchartPopup.form
+src/main/java/moe/leer/plugins/codeflow/FlowchartPopup.java
+src/main/java/moe/leer/plugins/codeflow/*Test.java
+tests/

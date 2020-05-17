@@ -13,7 +13,6 @@ import moe.leer.codeflowcore.CodeFlow;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 
 /**
  * @author leer
@@ -48,7 +47,7 @@ public class GenerateFlowchartAction extends AnAction {
     BufferedImage image = null;
     try {
       image = codeFlow.parse(code).toImage();
-    } catch (IOException ex) {
+    } catch (Exception ex) {
       ex.printStackTrace();
     }
 
